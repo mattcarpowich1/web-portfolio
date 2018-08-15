@@ -9,8 +9,6 @@ services:
     build: ./load-balancer
     ports:
       - '80:80'
-    volumes:
-      - /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site:/usr/share/nginx/html
     networks:
       - docker-network
 
