@@ -10,7 +10,7 @@ services:
     ports:
       - '80:80'
     volumes:
-      - ./app:/usr/share/nginx/html
+      - /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site:/usr/share/nginx/html
     networks:
       - docker-network
 
