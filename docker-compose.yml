@@ -2,11 +2,21 @@ version: '3.2'
 services: 
   backend:
     build: ./app
+    networks: 
+      - docker-network
 
   loadbalancer:
     build: ./load-balancer
     ports:
       - '80:80'
+    volumes:
+      - ./letsencrypt-site:/usr/share/nginx/html
+    networks:
+      - docker-network
 
 volumes:
   backend:
+
+networks:
+  docker-network:
+    driver: bridge
