@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.4 35.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #85e1c5;
+      }
+    </style>
+  </defs>
+  <title>matt</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path class="cls-1" d="M0,.42,22.18,15.63,44.36.42v33.4H34.28V18.48l-12.1,8.91-12.1-8.91V33.82H0Z"/>
+        <path class="cls-1" d="M83.59,29.36H61.07L56.45,35.5,49,30,72.33,0,95.68,30,88.21,35.5Zm-6-8-5.25-6.93-5.25,6.93Z"/>
+        <path class="cls-1" d="M132,10.71H117.35V33.82H106.93V10.71H92.31V2.31H132Z"/>
+        <path class="cls-1" d="M175.4,10.71H160.78V33.82H150.36V10.71H135.74V2.31H175.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
