@@ -1,5 +1,5 @@
 FROM alpine
-LABEL matainer="mattcarpowich@gmail.com"
+LABEL maintainer="mattcarpowich@gmail.com"
 RUN apk add --update nodejs nodejs-npm
 COPY . /src
 WORKDIR /src

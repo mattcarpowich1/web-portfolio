@@ -1,0 +1,12 @@
+version: '3.2'
+services: 
+  backend:
+    build: ./app
+
+  loadbalancer:
+    build: ./load-balancer
+    ports:
+      - '8080:80'
+
+volumes:
+  backend:
