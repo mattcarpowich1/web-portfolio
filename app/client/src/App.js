@@ -55,16 +55,16 @@ class App extends Component {
   }
 
   scrollTo () {
-    const top = this.projects.offsetTop
+    const top = this.about.offsetTop
     scroll.scrollTo(top)
   }
 
   render () {
     return (
-      <div>
+      <div className='container'>
         <nav className={`${this.state.sidebar ? 'invert' : ''}`}>
           <img src={`./matt${this.state.sidebar ? '-dark' : ''}.svg`} />
-          <img src={`${this.state.sidebar ? './dark-x.svg' : '/light-burger.svg'}`}
+          <img src={`${this.state.sidebar ? './black-x.svg' : '/light-burger.svg'}`}
             onClick={this.toggleSideBar} /> 
         </nav>
         <div className={`nav-links ${this.state.sidebar ? '' : 'hide'}`}>
@@ -78,13 +78,39 @@ class App extends Component {
               <ul className='products-list'>
                 <li>
                   <div>
-                    <i class="fas fa-desktop"></i>
+                    <i className="fas fa-desktop"></i>
                   </div>
                   <div>
                     <div>
                       <h4>Website Services</h4>
                       <p>
-                        Or web application. Built, tested, and deployed. 
+                        Build a custom website or landing page. 
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i className="fas fa-cogs"></i>
+                  </div>
+                  <div>
+                    <div>
+                      <h4>Application Engineering</h4>
+                      <p>
+                        Design custom application architecture for your needs.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i className="fas fa-cloud"></i>
+                  </div>
+                  <div>
+                    <div>
+                      <h4>Cloud Infrastructure</h4>
+                      <p>
+                        Provision, manage, and secure your resources on AWS.
                       </p>
                     </div>
                   </div>
@@ -111,16 +137,16 @@ class App extends Component {
             Hi.
           </h1>
           <p>
-            I am a Full Stack Web Developer living in Oakland, CA. I am passionate about building websites and web applications.
+            I am a Full Stack Web Developer living in Oakland, CA. 
           </p>
-          <button className='ingra' onClick={this.scrollTo}>VIEW MY WORK</button>
+          <button className='ingra' onClick={this.scrollTo}>LEARN MORE</button>
         </header>
         <main>
-          <section>
+          <section ref={node => {this.about = node}}>
             <h2>About Me</h2>
             <img src='./me.jpg' alt='me' />
             <p>
-              My name is Matt Carpowich. I was born and raised in San Diego, but I now call the bay my home. I graduated from UC Berkeley in 2016 with a degree in Cognitive Science. In 2018 I graduated from a Full Stack Coding Bootcamp. I love building things for the web - landing pages, UI/UX, backend API's, etc. My main language is JavaScript, but I also use Golang and sometimes Python. I'm always open to new projects, so feel free to reach out!
+              I graduated from UC Berkeley with a B.A. in Coginitive Science. After college I completed a coding bootcamp at UC Berkeley Extension to receive a certification in Full Stack Web Development. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). If you need a web-based app, no problem - I can quickly initialize an application stack running Node, Go, or Python. I can easily integrate a PostgreSQL or MongoDB instance to store your application data. I can also manage deployment to the cloud, where I can assure industry-grade security and monitoring of your virtual assets. I'm currently on the lookout for new projects, so feel free to reach out! 
             </p>
           </section>
           <section ref={node => {this.projects = node}}>
@@ -129,7 +155,7 @@ class App extends Component {
               <div className='project'>
                 <img src='./battleship.png' alt='battleship' />
                 <div className='project-info'>
-                  <h3>REACT BATTLESHIP</h3>
+                  <h3 className='ingra'>REACT BATTLESHIP</h3>
                   <p>2 Player battleship implementation in React.</p>
                   <p>
                     <a className='ingra' 
@@ -148,7 +174,7 @@ class App extends Component {
               <div className='project'>
                 <img src='./cue.png' alt='cue' />
                 <div className='project-info'>
-                  <h3>CUE</h3>
+                  <h3 className='ingra'>CUE</h3>
                   <p>
                     A jukebox-like music app that allows users to create collaborative playlists on the fly. Front-end built in React/Redux. Back-end built with Golang and PostgreSQL. A work in progress. 
                   </p>
@@ -163,7 +189,7 @@ class App extends Component {
               <div className='project'>
                 <img src='./amphibian.png' alt='cue' />
                 <div className='project-info'>
-                  <h3>AMPHIBIAN</h3>
+                  <h3 className='ingra'>AMPHIBIAN</h3>
                   <p>
                     Example Website. 
                   </p>

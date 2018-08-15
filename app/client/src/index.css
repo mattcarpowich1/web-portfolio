@@ -9,6 +9,10 @@
   --white2: #e9e9e9;
 
   --black: #212121;
+  --gray: #878787;
+
+  --font-primary: 'Ubuntu', sans-serif;
+  --font-condensed: 'Ubuntu Condensed', sans-serif;
 
   --big-responsive-font: calc(72px + (56 - 24) * (100vw - 360px)/(960-360));
   --medium-responsive-font: calc(48px + (48 - 20) * (100vw - 360px)/(960-360));
@@ -84,8 +88,10 @@ div.nav-links-links img {
 ul.inner-content {
   margin-left: 24px;
   margin-top: 24px;
+  margin-bottom: 24px;
+  width: 75%;
   color: var(--black);
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-primary);
 }
 
 ul.inner-content li {
@@ -121,7 +127,7 @@ img.flip {
 }
 
 div.nav-links-links {
-  position: relative;
+  position: absolute;
   top: 24px;
   right: 22px;
   display: flex;
@@ -153,7 +159,8 @@ ul.products-list li {
 }
 
 ul.products-list li > div:nth-child(1) {
-  width: 33%;
+  width: 25%;
+  max-width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +169,11 @@ ul.products-list li > div:nth-child(1) {
 
 ul.products-list li i {
   color: var(--black);
-  font-size: 40;
+  font-size: 24px;
+}
+
+ul.products-list li > div:nth-child(2) {
+  width: 72%;
 }
 
 ul.products-list li > div:nth-child(2) > div {
@@ -174,22 +185,17 @@ ul.products-list li > div:nth-child(2) > div {
 
 ul.products-list li > div:nth-child(2) > div > h4 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--black);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 ul.products-list li > div:nth-child(2) > div > p {
-  font-size: 12px;
-  font-weight: 400;
-  color: #767676;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray);
   line-height: 1.1;
 }
-
-
-/*nav a:nth-child(4) img {
-  margin-right: 16px;
-}*/
 
 nav img:hover {
   cursor: pointer;
@@ -204,22 +210,20 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /*z-index: -1;*/
 }
 
 header h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-primary);
   font-size: 64px;
   font-weight: 700;
   text-align: left;
   color: var(--white);
   margin: 0 auto;
-  margin-left: 22px;
-  /*margin-top: 64px;*/
+  margin-left: 20px;
 }
 
 header p {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 300;
   color: var(--g5);
@@ -234,7 +238,7 @@ header button {
   border-radius: 2px;
   border: none;
   padding: 16px 24px;
-  font-size: var(--teeny-responsive-font);
+  font-size: 18px;
   line-height: var(--tiny-responsive-font);
   color: var(--white);
 }
@@ -263,7 +267,7 @@ main section {
 }
 
 section {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-primary);
 }
 
 section h2 {
@@ -279,21 +283,19 @@ section h2 {
 
 section > p {
   font-size: var(--tiny-responsive-font);
-  font-family: 'Lato', serif;
+  font-family: var(--font-primary);
   margin-left: 24px;
   margin-right: 24px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.6em;
 }
 
 section:nth-child(1) img {
-  width: 240px;
+  width: 192px;
   height: auto;
-  border-radius: 50%;
   margin-top: 16px;
-  margin-left: calc(50vw - 128px);
+  margin-left: calc(50vw - 96px);
   margin-bottom: 32px;
-  border: 8px solid var(--g3);
 }
 
 main section:nth-child(2) {
@@ -333,14 +335,16 @@ div.project-info h3 {
 }
 
 div.project-info p {
-  font-family: 'Lato', serif;
+  font-family: var(--font-primary);
   font-size: var(--teeny-responsive-font);
   line-height: 1.6;
   color: var(--white);
   margin-bottom: 12px;
+  font-weight: 300;
 }
 
 div.project-info p a {
+  font-weight: 400;
   opacity: 1;
 }
 
