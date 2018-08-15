@@ -75,7 +75,21 @@ class App extends Component {
                 onClick={this.toggleProducts} />
             </li>
             <li className={`products ${this.state.products ? '' : 'hide'}`}>
-
+              <ul className='products-list'>
+                <li>
+                  <div>
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                  <div>
+                    <div>
+                      <h4>Website Services</h4>
+                      <p>
+                        Or web application. Built, tested, and deployed. 
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </li>
             <li>Solutions</li>
             <li>Resources</li>
