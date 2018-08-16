@@ -330,8 +330,8 @@ div.project {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 94%;
-  margin: 48px 24px;
+  width: 90vw;
+  margin: 48px 5vw;
   flex-wrap: wrap;
 }
 
