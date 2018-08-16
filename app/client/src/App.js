@@ -63,9 +63,14 @@ class App extends Component {
     return (
       <div className='container'>
         <nav className={`${this.state.sidebar ? 'invert' : ''}`}>
-          <img src={`./matt${this.state.sidebar ? '-dark' : ''}.svg`} />
-          <img src={`${this.state.sidebar ? './black-x.svg' : '/light-burger.svg'}`}
-            onClick={this.toggleSideBar} /> 
+          <img src='./matt-dark.svg' className={`${this.state.sidebar ? '' : 'hide'}`}/>
+          <img src='./matt.svg' className={`${this.state.sidebar ? 'hide' : ''}`}/>
+          <img src='./black-x.svg' 
+            className={`${this.state.sidebar ? '' : 'hide'}`}
+            onClick={this.toggleSideBar} />
+          <img src='./light-burger.svg' 
+            className={`${this.state.sidebar ? 'hide' : ''}`}
+            onClick={this.toggleSideBar} />
         </nav>
         <div className={`nav-links ${this.state.sidebar ? '' : 'hide'}`}>
           <ul className='inner-content'>
