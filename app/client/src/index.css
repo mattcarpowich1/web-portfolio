@@ -29,15 +29,19 @@ html, body {
   background: var(--g1);
 }
 
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 nav {
   height: 72px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 0;
-  right: 0;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
@@ -62,22 +66,24 @@ nav img:nth-child(1),
 nav img:nth-child(2) {
   height: 24px;
   width: auto;
-  margin-left: 24px;
+  margin-left: 5vw;
 }
 
 nav img:nth-child(3),
 nav img:nth-child(4) {
   height: 24px;
   width: auto;
-  margin-right: 24px;
+  margin-right: 5vw;
 }
 
 div.nav-links {
-  position: relative;
+  position: absolute;
+  top: 72px;
+  left: 0px;
   background-color: var(--white);
   margin: 0 auto;
   width: 100%;
-  margin-top: 71px;
+  margin-top: -1px;
   z-index: 5;
   display: flex;
   flex-direction: row;
@@ -95,7 +101,7 @@ div.nav-links-links img {
 }
 
 ul.inner-content {
-  margin-left: 24px;
+  margin-left: calc(5vw - 2px);
   margin-top: 24px;
   margin-bottom: 24px;
   width: 75%;
@@ -138,7 +144,7 @@ img.flip {
 div.nav-links-links {
   position: absolute;
   top: 24px;
-  right: 22px;
+  right: calc(5vw - 2px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -212,9 +218,7 @@ nav img:hover {
 
 header {
   height: calc(100vh - 72px);
-  position: absolute;
-  top: 72px;
-  left: 0;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,8 +231,8 @@ header h1 {
   font-weight: 700;
   text-align: left;
   color: var(--white);
-  margin: 0 auto;
-  margin-left: 20px;
+  /*margin: 0 auto;*/
+  margin-left: -2px;
 }
 
 header p {
@@ -236,13 +240,13 @@ header p {
   font-size: 24px;
   font-weight: 300;
   color: var(--g5);
-  margin-left: 23px;
+  /*margin-left: 23px;*/
   margin-right: 24px;
   margin-bottom: 32px;
 }
 
 header button {
-  margin-left: 24px;
+  /*margin-left: 24px;*/
   background-color: var(--g2);
   border-radius: 2px;
   border: none;
@@ -264,9 +268,9 @@ header button:active {
   outline: none;
 }
 
-main {
+/*main {
   margin-top: 100vh;
-}
+}*/
 
 main section {
   background-color: #fdfdfd;
@@ -282,8 +286,9 @@ section {
 section h2 {
   font-size: var(--small-responsive-font);
   margin-bottom: 16px;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -293,8 +298,9 @@ section h2 {
 section > p {
   font-size: var(--tiny-responsive-font);
   font-family: var(--font-primary);
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
   font-weight: 300;
   line-height: 1.6em;
 }
