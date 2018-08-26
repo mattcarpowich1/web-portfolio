@@ -14,9 +14,16 @@ class App extends Component {
     super()
     this.state = {
       sidebar: false,
-      products: false
+      products: false,
+      greens: [
+        false,
+        false,
+        false
+      ]
     }
 
+    this.greenLightsOff = this.greenLightsOff.bind(this)
+    this.greenLightsOn = this.greenLightsOn.bind(this)
     this.toggleProducts = this.toggleProducts.bind(this)
     this.toggleSideBar = this.toggleSideBar.bind(this)
     this.scrollTo = this.scrollTo.bind(this)
@@ -54,6 +61,20 @@ class App extends Component {
     })
   }
 
+  greenLightsOff (which) {
+    const { greens } = this.state
+    this.setState({
+      greens: greens.map((item, index) => index === which ? false : item)
+    })
+  }
+
+  greenLightsOn (which) {
+    const { greens } = this.state
+    this.setState({
+      greens: greens.map((item, index) => index === which ? true : item)
+    })
+  }
+
   scrollTo () {
     const top = this.about.offsetTop
     scroll.scrollTo(top)
@@ -63,14 +84,14 @@ class App extends Component {
     return (
       <div className='container'>
         <nav className={`${this.state.sidebar ? 'invert' : ''}`}>
-          <img src='./matt-dark.svg' className={`${this.state.sidebar ? '' : 'hide'}`}/>
-          <img src='./matt.svg' className={`${this.state.sidebar ? 'hide' : ''}`}/>
-          <img src='./black-x.svg' 
-            className={`${this.state.sidebar ? '' : 'hide'}`}
-            onClick={this.toggleSideBar} />
+          <img src='./matt.svg' className={`z-top ${this.state.sidebar ? 'hide' : ''}`}/>
+          <img src='./matt-dark.svg' className={`z-top ${this.state.sidebar ? '' : 'hide'}`}/>
           <img src='./light-burger.svg' 
-            className={`${this.state.sidebar ? 'hide' : ''}`}
+            className={`z-top ${this.state.sidebar ? 'hide' : ''}`}
             onClick={this.toggleSideBar} />
+          <img src='./black-x.svg' 
+              className={`z-top ${this.state.sidebar ? '' : 'hide'}`}
+              onClick={this.toggleSideBar} />
         </nav>
         <div className={`nav-links ${this.state.sidebar ? '' : 'hide'}`}>
           <ul className='inner-content'>
@@ -81,39 +102,46 @@ class App extends Component {
             </li>
             <li className={`products ${this.state.products ? '' : 'hide'}`}>
               <ul className='products-list'>
-                <li>
+                <li onMouseOver={() => this.greenLightsOn(0)}
+                    onMouseLeave={() => this.greenLightsOff(0)}>
                   <div>
-                    <i className="fas fa-desktop"></i>
+                    <i className={`fas fa-desktop ${this.state.greens[0] ? 'green-time' : ''}`}></i>
                   </div>
                   <div>
                     <div>
-                      <h4>Website Services</h4>
+                      <h4 className={`${this.state.greens[0] ? 'green-time' : ''}`}>
+                        Website Services
+                      </h4>
                       <p>
                         Build a custom website or landing page. 
                       </p>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li onMouseOver={() => this.greenLightsOn(1)}
+                    onMouseLeave={() => this.greenLightsOff(1)}>
                   <div>
-                    <i className="fas fa-cogs"></i>
+                    <i className={`fas fa-cogs ${this.state.greens[1] ? 'green-time' : ''}`}></i>
                   </div>
                   <div>
                     <div>
-                      <h4>Application Engineering</h4>
+                      <h4
+                        className={`${this.state.greens[1] ? 'green-time' : ''}`}>
+                      Application Engineering</h4>
                       <p>
                         Design custom application architecture for your needs.
                       </p>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li onMouseOver={() => this.greenLightsOn(2)}
+                    onMouseLeave={() => this.greenLightsOff(2)}>
                   <div>
-                    <i className="fas fa-cloud"></i>
+                    <i className={`fas fa-cloud ${this.state.greens[2] ? 'green-time' : ''}`}></i>
                   </div>
                   <div>
                     <div>
-                      <h4>Cloud Infrastructure</h4>
+                      <h4 className={`${this.state.greens[2] ? 'green-time' : ''}`}>Cloud Infrastructure</h4>
                       <p>
                         Provision, manage, and secure your resources on AWS.
                       </p>
@@ -149,7 +177,6 @@ class App extends Component {
         <main>
           <section ref={node => {this.about = node}}>
             <h2>About Me</h2>
-            <img src='./me.jpg' alt='me' />
             <p>
               I graduated from UC Berkeley with a B.A. in Coginitive Science. After college I completed a coding bootcamp at UC Berkeley Extension to receive a certification in Full Stack Web Development. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). If you need a web-based app, no problem - I can quickly initialize an application stack running Node, Go, or Python. I can easily integrate a PostgreSQL or MongoDB instance to store your application data. I can also manage deployment to the cloud, where I can assure industry-grade security and monitoring of your virtual assets. I'm currently on the lookout for new projects, so feel free to reach out! 
             </p>
