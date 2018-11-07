@@ -13,9 +13,11 @@ class App extends Component {
       sidebar: false,
       products: false,
       links: false,
-      fresh: true
+      fresh: true,
+      burgerHover: false
     }
 
+    this.toggleBurgerHover = this.toggleBurgerHover.bind(this)
     this.toggleProducts = this.toggleProducts.bind(this)
     this.toggleSideBar = this.toggleSideBar.bind(this)
     this.scrollTo = this.scrollTo.bind(this)
@@ -37,6 +39,13 @@ class App extends Component {
   componentWillUnmount () {
     Events.scrollEvent.remove('begin')
     Events.scrollEvent.remove('end')
+  }
+
+  toggleBurgerHover (status) {
+    const { burgerHover } = this.state
+    this.setState({
+      burgerHover: status
+    })
   }
 
   toggleSideBar () {
@@ -104,7 +113,9 @@ class App extends Component {
             this.state.links && this.state.sidebar ? links : null
           }
           <div className={`burger-x ${this.state.sidebar ? 'x-active' : ''}`}
-            onClick={this.toggleSideBar}>
+            onClick={this.toggleSideBar}
+            onMouseOver={() => this.toggleBurgerHover(true)}
+            onMouseLeave={() => this.toggleBurgerHover(false)}>
             <div />
             <div />
             <div />

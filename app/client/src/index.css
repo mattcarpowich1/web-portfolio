@@ -48,29 +48,23 @@ nav {
   padding-bottom: 24px;
   z-index: 10;
   background: var(--g1);
-  /*transition: background-color .5s cubic-bezier(0.645, 0.045, 0.355, 1.000);*/
 }
 
 nav img.hide {
   display: none;
-  /*transition: opacity .2s ease;*/
 }
 
 nav > img {
   padding-top: 16px;
   opacity: 1;
   z-index: 15;
-  /*transition: opacity .16s ease;*/
 }
 
 nav.invert {
   background-color: var(--white);
-  /*transition: background-color .5s ease;*/
   z-index: 15;
   height: 256px;
-  /*top: -204px;*/
   margin-top: -204px;
-  /*opacity: .9;*/
 }
 
 nav h1 {
@@ -91,19 +85,11 @@ nav h1 {
   width: 48px;
   margin-right: 5vw;
   transform: translateY(2px);
-  /*display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;*/
 }
 
 .burger-x.x-active {
   margin-right: calc(5vw - 9px);
   transform: translateY(6px);
-  /*justify-content: row;
-  align-items: flex-start;*/
-  /*flex-wrap: wrap;*/
-  /*height: 8px;*/
 }
 
 .burger-x div {
@@ -116,6 +102,42 @@ nav h1 {
   opacity: 1;
   transition: all .37s ease;
   transform: rotate(0deg);
+}
+
+.burger-x div:nth-child(4) {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 0px;
+  width: 0px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0s ease;
+}
+
+.burger-x div:nth-child(4).square {
+  z-index: -1;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  top: -28px;
+  left: -12px;
+  background: var(--black);
+  opacity: .1;
+  transition: all .1s ease;
+}
+
+.burger-x div:nth-child(4).circle {
+  opacity: .1;
+  background: var(--black);
+  position: relative;
+  top: -27px;
+  left: -8px;
+  z-index: 16;
+  width: 64px;
+  height: 64px;
+  transition: all .1s ease;
 }
 
 .burger-x div:nth-child(1) {
@@ -172,7 +194,6 @@ nav img:nth-child(4) {
 
 div.nav-links {
   position: fixed;
-  /*opacity: .9;*/
   top: 0px;
   left: 0px;
   background-color: var(--white);
@@ -187,11 +208,9 @@ div.nav-links {
   -webkit-box-shadow: 0px 2px 16px 0px rgba(33,33,33,1);
   -moz-box-shadow: 0px 2px 16px 0px rgba(33,33,33,1);
   box-shadow: 0px 2px 16px 0px rgba(33,33,33,1);
-  /*transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);*/
 }
 
 div.nav-links.normal {
-  /*z-index: 8;*/
   animation-name: unfoldDown !important;
   animation-duration: .5s;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -215,12 +234,10 @@ div.nav-links.fresh {
 @keyframes unfoldUp {
   0% {
     transform: translateY(0px);
-    /*display: black;*/
   }
 
   100% {
     transform: translateY(-240px);
-    /*display: none;*/
   }
 }
 
@@ -293,10 +310,6 @@ div.white {
 }
 
 div.nav-links-links {
-  /*position: absolute;
-  top: 211px;
-  left: 151px;*/
-  /*right: calc(5vw - 2px);*/
   flex-grow: 1;
   margin-left: 24px;
   margin-bottom: -7px;
@@ -305,19 +318,12 @@ div.nav-links-links {
   justify-content: flex-start;
   align-items: flex-end;
   align-self: flex-end;
-  /*margin-bottom: 32px;*/
-  /*width: 20%;*/
   animation: comeInRight;
   animation-duration: .35s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(.18,.9,.61,.98);
   z-index: 25;
-  /*z-index: -10;*/
 }
-
-/*nav-links div.nav-links-links {
-  transform: translateX(400px);
-}*/
 
 @keyframes comeInRight {
   0% {
@@ -335,7 +341,6 @@ div.nav-links.hide {
 }
 
 div.nav-links-links img {
-  /*margin-bottom: 16px;*/
   height: 32px;
   width: auto;
 }
@@ -429,7 +434,6 @@ header h1 {
   font-weight: 700;
   text-align: left;
   color: var(--white);
-  /*margin: 0 auto;*/
   margin-left: -2px;
 }
 
@@ -438,13 +442,11 @@ header p {
   font-size: 24px;
   font-weight: 300;
   color: var(--g5);
-  /*margin-left: 23px;*/
   margin-right: 24px;
   margin-bottom: 32px;
 }
 
 header button {
-  /*margin-left: 24px;*/
   background-color: var(--g2);
   border-radius: 2px;
   border: none;
