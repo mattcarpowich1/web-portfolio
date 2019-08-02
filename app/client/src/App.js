@@ -159,7 +159,7 @@ class App extends Component {
             Hi.
           </h1>
           <p>
-            I am a Full Stack Web Developer living in Oakland, CA.
+            I am a Full Stack Web Developer living in San Diego, CA.
           </p>
           <button className='ingra' onClick={this.scrollTo}>LEARN MORE</button>
         </header>
@@ -167,7 +167,7 @@ class App extends Component {
           <section ref={node => { this.about = node }}>
             <h2>About Me</h2>
             <p>
-              I graduated from UC Berkeley with a B.A. in Coginitive Science. After college I completed a coding bootcamp at UC Berkeley Extension to receive a certification in Full Stack Web Development. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). If you need a web-based app, no problem - I can quickly initialize an application stack running Node, Go, or Python. I can easily integrate a PostgreSQL or MongoDB instance to store your application data. I can also manage deployment to the cloud, where I can assure industry-grade security and monitoring of your virtual assets. I'm currently on the lookout for new projects, so feel free to reach out!
+              I graduated from UC Berkeley with a B.A. in Coginitive Science. After college I completed a coding bootcamp at UC Berkeley Extension to receive a certification in Full Stack Web Development. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). If you need a web-based app, no problem - I can quickly initialize an application stack running Node, Go, or Python. I can easily integrate a PostgreSQL or MongoDB instance to store your application data. I can also manage deployment to the cloud, where I can assure industry-grade security and monitoring of your virtual assets. 
             </p>
           </section>
           <section ref={node => { this.projects = node }}>
