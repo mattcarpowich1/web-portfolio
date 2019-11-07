@@ -231,6 +231,11 @@ class App extends Component {
             </div>
           </section>
         </main>
+        <footer>
+          <div className='copyright'>
+            &copy; Matt Carpowich 2019
+          </div>
+        </footer>
       </div>
     )
   }
