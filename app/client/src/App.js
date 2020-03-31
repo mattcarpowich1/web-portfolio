@@ -167,8 +167,16 @@ class App extends Component {
           <section ref={node => { this.about = node }}>
             <h2>About Matt</h2>
             <p>
-              I graduated from UC Berkeley with a B.A. in Coginitive Science. After college I completed a coding bootcamp at UC Berkeley Extension to receive a certification in Full Stack Web Development. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). If you need a web-based app, no problem - I can quickly initialize an application stack running Node, Go, or Python. I can easily integrate a PostgreSQL or MongoDB instance to store your application data. I can also manage deployment to the cloud, where I can assure industry-grade security and monitoring of your virtual assets. 
+              I graduated from UC Berkeley with a B.A. in Coginitive Science. I received a certification in Full Stack Web Development from UC Berkeley Extension. I can build clean, professional-looking websites from scratch using a wide range of web technologies. I'm an expert in JavaScript and love using React (which is how I built this website). I'm passionate about UI development. I also love music, surfing, and running. I currently work as a Web Developer at LUXVT.
             </p>
+          </section>
+          <section className='photomatt'>
+            <img src='./mattblackandwhite1.jpg' />
+            <div className='photo-stats'>
+              <small><span>Who: </span>Me</small>
+              <small><span>Where: </span>San Diego (Downtown)</small>
+              <small><span>When: </span>2019</small>
+            </div>
           </section>
           <section ref={node => { this.projects = node }}>
             <h2>My Work</h2>
@@ -180,13 +188,17 @@ class App extends Component {
                   <p>2 Player battleship implementation in React.</p>
                   <p>
                     <a className='ingra'
-                      href='https://react-battleship-mc.herokuapp.com'>
+                      href='https://react-battleship-mc.herokuapp.com'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       LINK
                     </a>
                   </p>
                   <p>
                     <a className='ingra'
-                      href='https://github.com/mattcarpowich1/battleship_react'>
+                      href='https://github.com/mattcarpowich1/battleship_react'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GITHUB REPO
                     </a>
                   </p>
@@ -201,7 +213,9 @@ class App extends Component {
                   </p>
                   <p>
                     <a className='ingra'
-                      href='https://github.com/cuelabs/cueapp'>
+                      href='https://github.com/cuelabs/cueapp'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GITHUB REPO
                     </a>
                   </p>
@@ -216,13 +230,17 @@ class App extends Component {
                   </p>
                   <p>
                     <a className='ingra'
-                      href='https://mattcarpowich1.github.io/website-example/'>
+                      href='https://mattcarpowich1.github.io/website-example/'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       LINK
                     </a>
                   </p>
                   <p>
                     <a className='ingra'
-                      href='https://github.com/mattcarpowich1/website-example'>
+                      href='https://github.com/mattcarpowich1/website-example'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GITHUB REPO
                     </a>
                   </p>
