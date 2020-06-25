@@ -41,6 +41,7 @@ div.container {
 nav {
   position: fixed;
   top: 0px;
+  left: 0px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -178,6 +179,14 @@ nav h1 {
 
 .burger-x.x-active div {
   border-color: var(--black);
+}
+
+nav img:nth-child(1) {
+  max-width: 122px;
+}
+
+nav.invert > img:nth-child(2) {
+  max-width: 122px;
 }
 
 nav img:nth-child(1),
