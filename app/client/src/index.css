@@ -5,6 +5,7 @@ div.App {
   align-items: center;
   width: 100vw;
   height: auto;
+  margin-top: -20px;
 }
 
 header {
@@ -53,7 +54,7 @@ main {
 }
 
 main p {
-  margin: 32px 0px;
+  margin: 24px 0px;
   color: #777;
   font-family: monospace;
   width: 100%;
