@@ -1,8 +1,19 @@
-FROM alpine
-LABEL maintainer="mattcarpowich@gmail.com"
-RUN apk add --update nodejs nodejs-npm
-COPY . /src
+FROM node:14
+
+# Create app directory
 WORKDIR /src
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY . ./src
+
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
+
 EXPOSE 3001
-CMD node server.js
+CMD [ "node", "server.js" ]
