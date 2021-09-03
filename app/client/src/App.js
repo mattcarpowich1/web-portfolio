@@ -171,12 +171,6 @@ class App extends Component {
             </p>
           </section>
           <section className='photomatt'>
-            <img src='./mattblackandwhite1.jpg' />
-            <div className='photo-stats'>
-              <small><span>Who: </span>Me</small>
-              <small><span>Where: </span>San Diego (Downtown)</small>
-              <small><span>When: </span>2019</small>
-            </div>
           </section>
           <section ref={node => { this.projects = node }}>
             <h2>My Work</h2>
@@ -214,31 +208,6 @@ class App extends Component {
                   <p>
                     <a className='ingra'
                       href='https://github.com/cuelabs/cueapp'
-                      target='_blank'
-                      rel='noopener noreferrer'>
-                      GITHUB REPO
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className='project'>
-                <img src='./amphibian.png' alt='cue' />
-                <div className='project-info'>
-                  <h3 className='ingra'>AMPHIBIAN</h3>
-                  <p>
-                    Example Website.
-                  </p>
-                  <p>
-                    <a className='ingra'
-                      href='https://mattcarpowich1.github.io/website-example/'
-                      target='_blank'
-                      rel='noopener noreferrer'>
-                      LINK
-                    </a>
-                  </p>
-                  <p>
-                    <a className='ingra'
-                      href='https://github.com/mattcarpowich1/website-example'
                       target='_blank'
                       rel='noopener noreferrer'>
                       GITHUB REPO
