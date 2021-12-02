@@ -220,7 +220,7 @@ class App extends Component {
         </main>
         <footer>
           <div className='copyright'>
-            &copy; Matt Carpowich 2020
+            &copy; Matt Carpowich {new Date().getFullYear()}
           </div>
         </footer>
       </div>
